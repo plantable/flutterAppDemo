@@ -1,8 +1,8 @@
 import 'dart:collection';
 import 'dart:convert';
 
-import 'package:dio/dio.dart';
 import 'package:get/get.dart';
+import 'package:plantable/base/constatnts/color_constants.dart';
 
 class LoginProvider extends GetConnect {
   Future<dynamic> getTokenAndLogin(params) async {
@@ -25,11 +25,18 @@ class LoginProvider extends GetConnect {
 
       print('AUTH RESPONSE');
       print(tokenResponse.body);
+
       var loginRes = await doLogin(tokenResponse.body['access_token'], params);
 
       return loginRes;
     } catch (e) {
       print(e.toString());
+      Get.snackbar(
+        'Error',
+        e.toString(),
+        backgroundColor: kPrimaryColor,
+        colorText: kWhiteColor,
+      );
       return null;
     }
   }
@@ -41,7 +48,7 @@ class LoginProvider extends GetConnect {
     print("PARAMS ==> $params");
 
     HashMap<String, String> headersss = HashMap<String, String>();
-    headersss['AuthorizationToken'] = token;
+    headersss['authorizationtoken'] = token;
     headersss['Content-Type'] = 'application/json';
 
     print('HEADERS =>');
@@ -51,9 +58,9 @@ class LoginProvider extends GetConnect {
       json.encode(params),
       headers: headersss,
     );
-    print(response.body);
+    print(response.statusCode);
 
-    print(response.headers);
+    print(response.body);
     return response.body;
   }
 }

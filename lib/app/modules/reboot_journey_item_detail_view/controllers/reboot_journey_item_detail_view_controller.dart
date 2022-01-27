@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
-  //TODO: Implement HomeController
+class RebootJourneyItemDetailViewController extends GetxController {
+  //TODO: Implement RebootJourneyItemDetailViewController
 
   final count = 0.obs;
   @override

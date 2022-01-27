@@ -1,9 +1,10 @@
 import 'package:responsive_framework/responsive_framework.dart';
 
 const List<Condition> valuesWhen = [
-  Condition.largerThan(name: MOBILE, value: 350),
-  Condition.largerThan(name: TABLET, value: 450)
+  Condition.largerThan(name: MOBILE, value: 350.0),
+  Condition.largerThan(name: TABLET, value: 450.0)
 ];
+
 
 const List<Condition> hiddenValues = [
   Condition.smallerThan(name: TABLET),
@@ -11,5 +12,6 @@ const List<Condition> hiddenValues = [
 ];
 
 const List<Condition> hiddenAppBarValues = [
-  Condition.smallerThan(name: MOBILE)
+  Condition.smallerThan(name: MOBILE),
+  
 ];

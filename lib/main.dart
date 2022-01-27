@@ -30,6 +30,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  final ThemeData theme = ThemeData();
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -42,8 +43,11 @@ class MyApp extends StatelessWidget {
           ResponsiveBreakpoint.autoScale(1700, name: 'XL'),
         ],
       ),
-      theme: ThemeData(
-          splashColor: kTransperentColor, highlightColor: kTransperentColor),
+      theme: theme.copyWith(
+        colorScheme: theme.colorScheme.copyWith(
+          primary: kPrimaryColor,
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       translations: Languages(), // initiate the localization
       locale: const Locale('en', 'US'), // initial localization

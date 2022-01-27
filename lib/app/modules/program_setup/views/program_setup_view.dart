@@ -19,30 +19,33 @@ import '../controllers/program_setup_controller.dart';
 class ProgramSetupView extends GetView<ProgramSetupController> {
   @override
   Widget build(BuildContext context) {
-    return BaseScaffold(
-      child: controller.obx((state) => Container(
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Expanded(flex: 6, child: _getHeader()),
-                Expanded(
-                    flex: 18,
-                    child: Container(
-                        child: controller.programSetupSteps ==
-                                ProgramSetupSteps.WISH_LIST
-                            ? YourWishListView()
-                            : controller.programSetupSteps ==
-                                    ProgramSetupSteps.AGE
-                                ? AgeListView()
-                                : controller.programSetupSteps ==
-                                        ProgramSetupSteps.GENDER
-                                    ? GenderListView()
-                                    : controller.programSetupSteps ==
-                                            ProgramSetupSteps.DIET
-                                        ? DietListView()
-                                        : CountryListView())),
-                Expanded(flex: 7, child: _getFooter())
-              ],
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: controller.obx((state) => SafeArea(
+            child: Container(
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Expanded(flex: 6, child: _getHeader()),
+                  Expanded(
+                      flex: 18,
+                      child: Container(
+                          child: controller.programSetupSteps ==
+                                  ProgramSetupSteps.WISH_LIST
+                              ? YourWishListView()
+                              : controller.programSetupSteps ==
+                                      ProgramSetupSteps.AGE
+                                  ? AgeListView()
+                                  : controller.programSetupSteps ==
+                                          ProgramSetupSteps.GENDER
+                                      ? GenderListView()
+                                      : controller.programSetupSteps ==
+                                              ProgramSetupSteps.DIET
+                                          ? DietListView()
+                                          : CountryListView())),
+                  Expanded(flex: 7, child: _getFooter())
+                ],
+              ),
             ),
           )),
     );
@@ -52,6 +55,7 @@ class ProgramSetupView extends GetView<ProgramSetupController> {
         data: ThemeData(
             highlightColor: kTransperentColor, splashColor: kTransperentColor),
         child: CustomAppBar(
+          bgColor: Colors.white,
           backButton: Padding(
             padding: EdgeInsets.only(left: 10.0),
             child: IconButton(

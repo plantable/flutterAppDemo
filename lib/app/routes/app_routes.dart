@@ -10,6 +10,15 @@ abstract class Routes {
   static const LOGIN = _Paths.LOGIN;
   static const PROGRAM_SETUP = _Paths.PROGRAM_SETUP;
   static const SIGNUP = _Paths.SIGNUP;
+  static const DASHBOARD = _Paths.DASHBOARD;
+  static const SHOPPING_LIST = _Paths.SHOPPING_LIST;
+  static const SETTINGS = _Paths.SETTINGS;
+  static const RECIPIESITEMDETAIL = _Paths.RECIPIESITEMDETAIL;
+  static const RECIPIES_ITEM_DETAIL = _Paths.RECIPIES_ITEM_DETAIL;
+  static const REBOOT_JOURNEY_ITEM_DETAIL_VIEW =
+      _Paths.REBOOT_JOURNEY_ITEM_DETAIL_VIEW;
+  static const REBOOT_HOW_TO_ITEM_DETAIL_VIEW =
+      _Paths.REBOOT_HOW_TO_ITEM_DETAIL_VIEW;
 }
 
 abstract class _Paths {
@@ -19,4 +28,13 @@ abstract class _Paths {
   static const LOGIN = '/login';
   static const PROGRAM_SETUP = '/program-setup';
   static const SIGNUP = '/signup';
+  static const DASHBOARD = '/dashboard';
+  static const SHOPPING_LIST = '/shopping-list';
+  static const SETTINGS = '/settings';
+  static const RECIPIESITEMDETAIL = '/recipiesitemdetail';
+  static const RECIPIES_ITEM_DETAIL = '/recipies-item-detail';
+  static const REBOOT_JOURNEY_ITEM_DETAIL_VIEW =
+      '/reboot-journey-item-detail-view';
+  static const REBOOT_HOW_TO_ITEM_DETAIL_VIEW =
+      '/reboot-how-to-item-detail-view';
 }

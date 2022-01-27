@@ -1,11 +1,8 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:plantable/app/modules/login/models/login_model.dart';
-import 'package:http/http.dart' as http;
 import 'package:plantable/app/modules/login/providers/login_provider.dart';
-import 'package:plantable/base/constatnts/color_constants.dart';
+import 'package:plantable/app/routes/app_pages.dart';
 
 class LoginController extends GetxController with StateMixin<LoginModel> {
   var token = '';
@@ -36,6 +33,7 @@ class LoginController extends GetxController with StateMixin<LoginModel> {
   void onClose() {}
 
   doLogin() async {
+    // Get.offAllNamed(Routes.DASHBOAsRD);
     isLoading.value = true;
     update();
     var res = await _loginProvider.getTokenAndLogin(
@@ -44,13 +42,9 @@ class LoginController extends GetxController with StateMixin<LoginModel> {
     isLoading.value = false;
     update();
 
-    Get.snackbar(
-      'Error',
-      'Invalied Cridentials',
-      backgroundColor: kPrimaryColor,
-      colorText: kWhiteColor,
-    );
     if (res == null) {
-    } else {}
+    } else {
+      Get.offAllNamed(Routes.DASHBOARD);
+    }
   }
 }

@@ -11,9 +11,12 @@ class CustomAppBar extends StatelessWidget {
 
   var title;
 
+  var resizeToAvoidBottomPadding;
+
   CustomAppBar(
       {this.backButton,
       this.bgColor = kAppBackgroundColor,
+      this.resizeToAvoidBottomPadding = false,
       this.closeIcon,
       this.title});
   @override
