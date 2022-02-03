@@ -66,15 +66,20 @@ class SettingsView extends GetView<SettingsController> {
   Widget _programItem() {
     return Column(
       children: [
-        SettingsItemsView(
-          suffexIcon: Icon(
-            Icons.book,
-            size: 30.0,
-            color: Colors.black38,
+        InkWell(
+          onTap: () {
+            Get.toNamed(Routes.PROGRAM);
+          },
+          child: SettingsItemsView(
+            suffexIcon: Icon(
+              Icons.book,
+              size: 30.0,
+              color: Colors.black38,
+            ),
+            title: "Program",
+            from: 'PROGRAM',
+            endText: "Reboot",
           ),
-          title: "Program",
-          from: 'PROGRAM',
-          endText: "Reboot",
         ),
         Container(
           margin: EdgeInsets.only(left: 50.0),
@@ -143,13 +148,18 @@ class SettingsView extends GetView<SettingsController> {
             color: Colors.black,
           ),
         ),
-        SettingsItemsView(
-          suffexIcon: Icon(
-            Icons.book,
-            size: 30.0,
-            color: Colors.black38,
+        InkWell(
+          onTap: () {
+            Get.toNamed(Routes.FEEDBACK);
+          },
+          child: SettingsItemsView(
+            suffexIcon: Icon(
+              Icons.book,
+              size: 30.0,
+              color: Colors.black38,
+            ),
+            title: "Feedback",
           ),
-          title: "Feedback",
         ),
         Container(
           margin: EdgeInsets.only(left: 50.0),
