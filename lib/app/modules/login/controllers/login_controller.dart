@@ -33,18 +33,18 @@ class LoginController extends GetxController with StateMixin<LoginModel> {
   void onClose() {}
 
   doLogin() async {
-    Get.offAllNamed(Routes.DASHBOARD);
-    // isLoading.value = true;
-    // update();
-    // var res = await _loginProvider.getTokenAndLogin(
-    //     {"username": emailConroller.text, "password": passwordConroller.text});
+    // Get.offAllNamed(Routes.DASHBOARD);
+    isLoading.value = true;
+    update();
+    var res = await _loginProvider.getTokenAndLogin(
+        {"username": emailConroller.text, "password": passwordConroller.text});
 
-    // isLoading.value = false;
-    // update();
+    isLoading.value = false;
+    update();
 
-    // if (res == null) {
-    // } else {
-    //   Get.offAllNamed(Routes.DASHBOARD);
-    // }
+    if (res == null) {
+    } else {
+      Get.offAllNamed(Routes.DASHBOARD);
+    }
   }
 }
