@@ -10,12 +10,12 @@ class RebootJourneyItemDetailView
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('RebootJourneyItemDetailView'),
+        title: Text('Reboot Journey'),
         centerTitle: true,
       ),
       body: Center(
         child: Text(
-          'RebootJourneyItemDetailView under construction',
+          'PDF Reader',
           style: TextStyle(fontSize: 20),
         ),
       ),
