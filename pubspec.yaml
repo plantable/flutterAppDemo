@@ -17,6 +17,7 @@ dependencies:
   fancy_bottom_navigation: ^0.3.3
   bulleted_list: ^0.0.1+0.1a
   percent_indicator: ^4.0.0
+  webview_flutter: ^3.0.0
   
   flutter: 
     sdk: flutter
