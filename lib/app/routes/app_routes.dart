@@ -19,6 +19,7 @@ abstract class Routes {
       _Paths.REBOOT_JOURNEY_ITEM_DETAIL_VIEW;
   static const REBOOT_HOW_TO_ITEM_DETAIL_VIEW =
       _Paths.REBOOT_HOW_TO_ITEM_DETAIL_VIEW;
+  static const FEEDBACK = _Paths.FEEDBACK;
 }
 
 abstract class _Paths {
@@ -37,4 +38,5 @@ abstract class _Paths {
       '/reboot-journey-item-detail-view';
   static const REBOOT_HOW_TO_ITEM_DETAIL_VIEW =
       '/reboot-how-to-item-detail-view';
+  static const FEEDBACK = '/feedback';
 }

@@ -18,6 +18,8 @@ class CustomTextField extends StatelessWidget {
 
   Function(String)? onChange;
 
+  EdgeInsets? padding = EdgeInsets.all(0);
+
   CustomTextField(
       {this.hint,
       this.keyboard,
@@ -29,6 +31,7 @@ class CustomTextField extends StatelessWidget {
       this.maxLength = 100,
       this.maxLines = 1,
       this.isPassword = false,
+      this.padding,
       this.height = 45.0,
       this.onChange});
 
@@ -45,6 +48,7 @@ class CustomTextField extends StatelessWidget {
         controller: controller,
         decoration: InputDecoration(
           hintStyle: TextStyle(fontSize: 14),
+          contentPadding: padding,
           hintText: hint,
           suffixIcon: suffixIcon,
           prefixIcon: prefixIcon,

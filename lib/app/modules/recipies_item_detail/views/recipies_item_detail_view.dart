@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:plantable/app/routes/app_pages.dart';
 import 'package:plantable/base/base_widgets.dart/custom_button.dart';
 import 'package:plantable/base/constatnts/color_constants.dart';
 import 'package:plantable/base/languages/text_keys.dart';
@@ -332,12 +333,17 @@ class RecipiesItemDetailView extends GetView<RecipiesItemDetailController> {
             width: Get.width,
             color: kAppBackgroundColor,
             child: Center(
-              child: Text(
-                'Feedback',
-                style: TextStyle(
-                    color: kPrimaryColor,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 18.0),
+              child: InkWell(
+                onTap: () {
+                  Get.toNamed(Routes.FEEDBACK);
+                },
+                child: Text(
+                  'Feedback',
+                  style: TextStyle(
+                      color: kPrimaryColor,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18.0),
+                ),
               ),
             ),
           )

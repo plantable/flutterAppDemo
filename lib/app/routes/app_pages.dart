@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/dashboard/bindings/dashboard_binding.dart';
 import '../modules/dashboard/views/dashboard_view.dart';
+import '../modules/feedback/bindings/feedback_binding.dart';
+import '../modules/feedback/views/feedback_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/program_setup/bindings/program_setup_binding.dart';
@@ -85,6 +87,11 @@ class AppPages {
       name: _Paths.REBOOT_HOW_TO_ITEM_DETAIL_VIEW,
       page: () => RebootHowToItemDetailView(),
       binding: RebootHowToItemDetailViewBinding(),
+    ),
+    GetPage(
+      name: _Paths.FEEDBACK,
+      page: () => FeedbackView(),
+      binding: FeedbackBinding(),
     ),
   ];
 }
