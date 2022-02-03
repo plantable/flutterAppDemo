@@ -20,6 +20,9 @@ abstract class Routes {
   static const REBOOT_HOW_TO_ITEM_DETAIL_VIEW =
       _Paths.REBOOT_HOW_TO_ITEM_DETAIL_VIEW;
   static const FEEDBACK = _Paths.FEEDBACK;
+  static const PROFILE = _Paths.PROFILE;
+  static const PROGRAM = _Paths.PROGRAM;
+  static const UNIT_PREFERANCES = _Paths.UNIT_PREFERANCES;
 }
 
 abstract class _Paths {
@@ -39,4 +42,7 @@ abstract class _Paths {
   static const REBOOT_HOW_TO_ITEM_DETAIL_VIEW =
       '/reboot-how-to-item-detail-view';
   static const FEEDBACK = '/feedback';
+  static const PROFILE = '/profile';
+  static const PROGRAM = '/program';
+  static const UNIT_PREFERANCES = '/unit-preferances';
 }

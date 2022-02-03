@@ -73,11 +73,12 @@ class SettingsItemsView extends GetView {
               ),
             ),
             // Text('Free Account'),
-            Icon(
-              Icons.arrow_forward_ios,
-              size: 18.0,
-              color: Colors.black45,
-            )
+            if (from != 'PROFILES')
+              Icon(
+                Icons.arrow_forward_ios,
+                size: 18.0,
+                color: Colors.black45,
+              )
           ],
         )
         // Text(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:plantable/app/modules/settings/views/settings_items_view.dart';
+import 'package:plantable/app/routes/app_pages.dart';
 import 'package:plantable/base/constatnts/color_constants.dart';
 
 import '../controllers/settings_controller.dart';
@@ -45,15 +46,20 @@ class SettingsView extends GetView<SettingsController> {
   }
 
   Widget _profileItem() {
-    return SettingsItemsView(
-      suffexIcon: Icon(
-        Icons.account_circle_outlined,
-        size: 60.0,
-        color: kPrimaryColor,
+    return InkWell(
+      onTap: () {
+        Get.toNamed(Routes.PROFILE);
+      },
+      child: SettingsItemsView(
+        suffexIcon: Icon(
+          Icons.account_circle_outlined,
+          size: 60.0,
+          color: kPrimaryColor,
+        ),
+        title: "Demo Account",
+        subtitle: 'Free Account',
+        from: 'PROFILE',
       ),
-      title: "Demo Account",
-      subtitle: 'Free Account',
-      from: 'PROFILE',
     );
   }
 

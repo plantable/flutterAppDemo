@@ -6,6 +6,10 @@ import '../modules/feedback/bindings/feedback_binding.dart';
 import '../modules/feedback/views/feedback_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
+import '../modules/profile/bindings/profile_binding.dart';
+import '../modules/profile/views/profile_view.dart';
+import '../modules/program/bindings/program_binding.dart';
+import '../modules/program/views/program_view.dart';
 import '../modules/program_setup/bindings/program_setup_binding.dart';
 import '../modules/program_setup/views/program_setup_view.dart';
 import '../modules/reboot_how_to_item_detail_view/bindings/reboot_how_to_item_detail_view_binding.dart';
@@ -24,6 +28,8 @@ import '../modules/signup/bindings/signup_binding.dart';
 import '../modules/signup/views/signup_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
+import '../modules/unit_preferances/bindings/unit_preferances_binding.dart';
+import '../modules/unit_preferances/views/unit_preferances_view.dart';
 
 part 'app_routes.dart';
 
@@ -92,6 +98,21 @@ class AppPages {
       name: _Paths.FEEDBACK,
       page: () => FeedbackView(),
       binding: FeedbackBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROFILE,
+      page: () => ProfileView(),
+      binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.PROGRAM,
+      page: () => ProgramView(),
+      binding: ProgramBinding(),
+    ),
+    GetPage(
+      name: _Paths.UNIT_PREFERANCES,
+      page: () => UnitPreferancesView(),
+      binding: UnitPreferancesBinding(),
     ),
   ];
 }
