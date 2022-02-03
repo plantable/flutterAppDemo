@@ -95,14 +95,19 @@ class SettingsView extends GetView<SettingsController> {
   _preferancesandNotificationItem() {
     return Column(
       children: [
-        SettingsItemsView(
-          suffexIcon: Icon(
-            Icons.book,
-            size: 30.0,
-            color: Colors.black38,
+        InkWell(
+          onTap: () {
+            Get.toNamed(Routes.UNIT_PREFERANCES);
+          },
+          child: SettingsItemsView(
+            suffexIcon: Icon(
+              Icons.book,
+              size: 30.0,
+              color: Colors.black38,
+            ),
+            title: "Unit Preferances",
+            endText: "Imperial",
           ),
-          title: "Unit Preferances",
-          endText: "Imperial",
         ),
         Container(
           margin: EdgeInsets.only(left: 50.0),
@@ -133,13 +138,18 @@ class SettingsView extends GetView<SettingsController> {
   _helpFeedbackAndAbout() {
     return Column(
       children: [
-        SettingsItemsView(
-          suffexIcon: Icon(
-            Icons.book,
-            size: 30.0,
-            color: Colors.black38,
+        InkWell(
+          onTap: () {
+            Get.toNamed(Routes.CUSTOM_WEB_VIEW);
+          },
+          child: SettingsItemsView(
+            suffexIcon: Icon(
+              Icons.book,
+              size: 30.0,
+              color: Colors.black38,
+            ),
+            title: "Help Center",
           ),
-          title: "Help Center",
         ),
         Container(
           margin: EdgeInsets.only(left: 50.0),

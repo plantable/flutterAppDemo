@@ -23,6 +23,7 @@ abstract class Routes {
   static const PROFILE = _Paths.PROFILE;
   static const PROGRAM = _Paths.PROGRAM;
   static const UNIT_PREFERANCES = _Paths.UNIT_PREFERANCES;
+  static const CUSTOM_WEB_VIEW = _Paths.CUSTOM_WEB_VIEW;
 }
 
 abstract class _Paths {
@@ -45,4 +46,5 @@ abstract class _Paths {
   static const PROFILE = '/profile';
   static const PROGRAM = '/program';
   static const UNIT_PREFERANCES = '/unit-preferances';
+  static const CUSTOM_WEB_VIEW = '/custom-web-view';
 }

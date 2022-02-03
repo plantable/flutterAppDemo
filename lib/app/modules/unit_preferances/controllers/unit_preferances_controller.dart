@@ -1,11 +1,19 @@
 import 'package:get/get.dart';
 
-class UnitPreferancesController extends GetxController {
+class UnitPreferancesController extends GetxController
+    with StateMixin<dynamic> {
   //TODO: Implement UnitPreferancesController
 
-  final count = 0.obs;
+  var agePosition = -1.obs;
+
+  List<String> countryList = [
+    'Imperial',
+    'Metric',
+  ];
+
   @override
   void onInit() {
+    change(null, status: RxStatus.success());
     super.onInit();
   }
 
@@ -16,5 +24,4 @@ class UnitPreferancesController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
 }

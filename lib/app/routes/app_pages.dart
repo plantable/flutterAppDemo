@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/custom_web_view/bindings/custom_web_view_binding.dart';
+import '../modules/custom_web_view/views/custom_web_view_view.dart';
 import '../modules/dashboard/bindings/dashboard_binding.dart';
 import '../modules/dashboard/views/dashboard_view.dart';
 import '../modules/feedback/bindings/feedback_binding.dart';
@@ -113,6 +115,11 @@ class AppPages {
       name: _Paths.UNIT_PREFERANCES,
       page: () => UnitPreferancesView(),
       binding: UnitPreferancesBinding(),
+    ),
+    GetPage(
+      name: _Paths.CUSTOM_WEB_VIEW,
+      page: () => CustomWebViewView(),
+      binding: CustomWebViewBinding(),
     ),
   ];
 }
